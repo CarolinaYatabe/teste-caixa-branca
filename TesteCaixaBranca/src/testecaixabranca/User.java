@@ -7,7 +7,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class User {
+    //1
     public Connection conectarBD(){
+        //2
         Connection conn = null;
         try{
             Class.forName("com.mysql.Driver.Manager").newInstance();
@@ -18,18 +20,28 @@ public class User {
     public String nome="";
     public boolean result = false;
     public boolean verificarUsuario(String login, String senha){
+        //3
         String sql = "";
+        //4
         Connection conn = conectarBD();
         //INSTRUÇÃO SQL
+        //5
         sql += "select nome from usuários ";
         sql += "where login = " + "'" + login + "'";
         sql += "  and senha  = " + "'" + senha  + "';";
+    //6    
     try{
+        //7
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery(sql);
         if(rs.next()){
+            //8
             result = true;
+            //9
             nome = rs.getString("nome");}
+            //10
+        //11    
         }catch (Exception e){ }
+        //12
         return result;}
     }
