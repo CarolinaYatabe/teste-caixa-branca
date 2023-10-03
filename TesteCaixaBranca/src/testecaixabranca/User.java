@@ -31,7 +31,8 @@ public class User {
         sql += "  and senha  = " + "'" + senha  + "';";
     //6    
     try{
-        //7
+    //7
+        //8
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery(sql);
         if(rs.next()){
@@ -40,8 +41,10 @@ public class User {
             //9
             nome = rs.getString("nome");}
             //10
-        //11    
+        //11 - result = false
+        //12 - fim do resultado
+        //13
         }catch (Exception e){ }
-        //12
+        //14
         return result;}
     }
