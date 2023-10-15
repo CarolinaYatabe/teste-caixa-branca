@@ -37,3 +37,6 @@ Esse read.me tem a finalidade de apontar os erros encontrados no código.
   <p>1-2-3-4-5-7-8-11-12-13-14</p>
   <h3>Exceção na consulta SQL</h3>
   <p>1-2-3-4-6-13-14</p>
+
+  <h2>Comentários no código</h2>
+  <p>Os comentários foram adicionados para explicar a função de cada ação realizada no código</p>
